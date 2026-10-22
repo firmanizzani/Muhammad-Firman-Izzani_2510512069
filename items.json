@@ -1,0 +1,50 @@
+[
+  {
+    "nama": "Pulpen Pilot Hitam",
+    "kategori": "Alat Tulis",
+    "stok": 50,
+    "harga": 3500
+  },
+  {
+    "nama": "Pensil 2B Faber-Castell",
+    "kategori": "Alat Tulis",
+    "stok": 40,
+    "harga": 4000
+  },
+  {
+    "nama": "Rautan Pensil Putar",
+    "kategori": "Aksesoris",
+    "stok": 15,
+    "harga": 12000
+  },
+  {
+    "nama": "Penghapus Joyko Putih",
+    "kategori": "Alat Tulis",
+    "stok": 30,
+    "harga": 2000
+  },
+  {
+    "nama": "Buku Tulis Sinar Dunia 38",
+    "kategori": "Kertas & Buku",
+    "stok": 60,
+    "harga": 5000
+  },
+  {
+    "nama": "Gunting Kertas Joyko",
+    "kategori": "Peralatan",
+    "stok": 12,
+    "harga": 8000
+  },
+  {
+    "nama": "Stabilo Boss Kuning",
+    "kategori": "Alat Tulis",
+    "stok": 8,
+    "harga": 9500
+  },
+  {
+    "nama": "Pulpen 3 Warna",
+    "kategori": "Alat Tulis",
+    "stok": 20,
+    "harga": 7000
+  }
+]

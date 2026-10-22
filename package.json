@@ -1,0 +1,17 @@
+{
+  "name": "sistem-pengelolaan-stok-fotokopi",
+  "version": "1.0.0",
+  "description": "Sistem Pengelolaan Stok Barang Toko Fotokopi",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [
+    "crud",
+    "nodejs",
+    "cli"
+  ],
+  "author": "Firman Izzani",
+  "license": "ISC"
+}
