@@ -55,7 +55,7 @@ Setiap data barang disimpan dalam bentuk object di dalam array.
 
 ## Author
 
-- Nama: Firman Izzani
+- Nama: Muhammad Firman Izzani (2510512069)
 - Tema Proyek: Sistem Pengelolaan Stok Barang Toko Fotokopi
 - Kelas: Trial Study Club Backend Basic KSM Veterantech UPNVJ 2026
 - Mentor: Nadia Jasmine
