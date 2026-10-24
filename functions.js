@@ -61,10 +61,15 @@ export const getAllItems = () => {
 
 // UPDATE
 export const updateItem = (index, newNama, newKategori, newStok, newHarga) => {
+  if (index === undefined || index === null || String(index).trim() === '') {
+    console.log(`[GAGAL] Index barang tidak boleh kosong!`);
+    return false;
+  }
+
   const targetIndex = Number(index);
 
   // Validasi index
-  if (isNaN(targetIndex) || targetIndex < 0 || targetIndex >= items.length) {
+  if (isNaN(targetIndex) || !Number.isInteger(targetIndex) || targetIndex < 0 || targetIndex >= items.length) {
     console.log(`[GAGAL] Index ${index} tidak valid atau berada di luar jangkauan (0 - ${items.length - 1})!`);
     return false;
   }
@@ -90,10 +95,15 @@ export const updateItem = (index, newNama, newKategori, newStok, newHarga) => {
 
 // DELETE
 export const deleteItem = (index) => {
+  if (index === undefined || index === null || String(index).trim() === '') {
+    console.log(`[GAGAL] Index barang tidak boleh kosong. Penghapusan dibatalkan.`);
+    return false;
+  }
+
   const targetIndex = Number(index);
 
   // Validasi index
-  if (isNaN(targetIndex) || targetIndex < 0 || targetIndex >= items.length) {
+  if (isNaN(targetIndex) || !Number.isInteger(targetIndex) || targetIndex < 0 || targetIndex >= items.length) {
     console.log(`[GAGAL] Barang pada index ${index} tidak ditemukan, penghapusan dibatalkan.`);
     return false;
   }
