@@ -74,6 +74,26 @@ export const updateItem = (index, newNama, newKategori, newStok, newHarga) => {
     return false;
   }
 
+  // Validasi jika stok baru diinputkan
+  let parsedNewStok;
+  if (newStok !== undefined && newStok.trim() !== '') {
+    parsedNewStok = Number(newStok);
+    if (isNaN(parsedNewStok) || parsedNewStok < 0) {
+      console.log(`[GAGAL] Stok baru harus berupa angka positif (>= 0)!`);
+      return false;
+    }
+  }
+
+  // Validasi jika harga baru diinputkan
+  let parsedNewHarga;
+  if (newHarga !== undefined && newHarga.trim() !== '') {
+    parsedNewHarga = Number(newHarga);
+    if (isNaN(parsedNewHarga) || parsedNewHarga < 0) {
+      console.log(`[GAGAL] Harga baru harus berupa angka positif (>= 0)!`);
+      return false;
+    }
+  }
+
   // Update dengan spread operator
   const updatedItems = items.map((item, idx) => {
     if (idx === targetIndex) {
@@ -81,8 +101,8 @@ export const updateItem = (index, newNama, newKategori, newStok, newHarga) => {
         ...item,
         nama: newNama !== undefined && newNama.trim() !== '' ? newNama.trim() : item.nama,
         kategori: newKategori !== undefined && newKategori.trim() !== '' ? newKategori.trim() : item.kategori,
-        stok: newStok !== undefined && newStok.trim() !== '' && !isNaN(Number(newStok)) ? Number(newStok) : item.stok,
-        harga: newHarga !== undefined && newHarga.trim() !== '' && !isNaN(Number(newHarga)) ? Number(newHarga) : item.harga
+        stok: parsedNewStok !== undefined ? parsedNewStok : item.stok,
+        harga: parsedNewHarga !== undefined ? parsedNewHarga : item.harga
       };
     }
     return item;
